@@ -1,0 +1,25 @@
+<div class="default-page">
+  <div class="header">
+    <h1 id="main-title" class="container"><%= __('Article list') %></h1>
+  </div>
+  <div class="main container clearfix">
+    <form action="/save-article" method="post">
+      <h2>Create new article</h2>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" id="title" placeholder="Article Title">
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea class="form-control" rows="3" name="content" id="content"></textarea>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" id="publish" name="publish" value="1"> Publish
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/" class="btn btn-default">Back</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<h1>User list</h1>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>User Name</th>
+      <th>Email Address</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% _.each(users, function (user) { %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.firstName +' '+ user.lastName %></td>
+      <td><%= user.userEmail %></td>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>

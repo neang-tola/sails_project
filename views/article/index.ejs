@@ -1,0 +1,30 @@
+<div class="default-page">
+  <div class="header">
+    <h1 id="main-title" class="container"><%= __('Article list') %></h1>
+  </div>
+  <div class="main container clearfix">
+    <a href="/new-article" class="btn btn-primary"">Create Article</a>
+    <table class="table">
+      <thead>
+      <tr>
+        <th width="5%">No.</th>
+        <th width="25%">Title</th>
+        <th width="55%">Content</th>
+        <th colspan="2" width="15%"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <% var ind = 1;
+        _.each(articles, function(art) { %>
+      <tr data-id="<%= art.id %>" data-model="art">
+        <td><%= ind++ %></td>
+        <td><a href="/show-article/<%= art.id %>"><%= art.title %></a></td>
+        <td><%= art.description %></td>
+        <td class="text-right"><a href="/article-edit/<%= art.id %>">Edit</a></td>
+        <td class="text-right"><a href="/article-delete/<%= art.id %>">Delete</a></td>
+      </tr>
+      <% }) %>
+      </tbody>
+    </table>
+  </div>
+</div>
